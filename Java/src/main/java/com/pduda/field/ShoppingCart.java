@@ -6,7 +6,7 @@ public class ShoppingCart {
     private int numberOfProducts;
 
     public void add(int price) {
-        this.price = price;
+        this.price += price;
         this.numberOfProducts++;
     }
 

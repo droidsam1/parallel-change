@@ -39,12 +39,21 @@ public class ShoppingCartTest {
     }
 
     @Test
-    public void multipleItem_numberOfProductsInTheCart() {
+    public void multipleItems_numberOfProductsInTheCart() {
         ShoppingCart shoppingCart = new ShoppingCart();
         shoppingCart.add(10);
         shoppingCart.add(10);
 
         Assertions.assertEquals(2, shoppingCart.numberOfProducts());
+    }
+
+    @Test
+    public void multipleItems_totalPrice() {
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.add(10);
+        shoppingCart.add(10);
+
+        Assertions.assertEquals(20, shoppingCart.calculateTotalPrice());
     }
 
 }
