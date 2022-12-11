@@ -6,14 +6,12 @@ import java.util.List;
 public class ShoppingCart {
     private final List<Integer> productPrices;
     private int price;
-    private boolean hasDiscount;
 
     public ShoppingCart() {
         productPrices = new ArrayList<>();
     }
 
     public void add(int price) {
-        this.hasDiscount = price >= 100;
         this.price += price;
         this.productPrices.add(price);
     }
