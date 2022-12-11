@@ -23,7 +23,7 @@ public class ShoppingCart {
     }
 
     public boolean hasDiscount() {
-        return hasDiscount;
+        return this.productPrices.stream().anyMatch(price -> price >= 100);
     }
 
     public int numberOfProducts() {
