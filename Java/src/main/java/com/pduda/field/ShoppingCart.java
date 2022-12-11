@@ -6,7 +6,6 @@ import java.util.List;
 public class ShoppingCart {
     private final List<Integer> productPrices;
     private int price;
-    private int numberOfProducts;
     private boolean hasDiscount;
 
     public ShoppingCart() {
@@ -16,7 +15,6 @@ public class ShoppingCart {
     public void add(int price) {
         this.hasDiscount = price >= 100;
         this.price += price;
-        this.numberOfProducts++;
         this.productPrices.add(price);
     }
 
