@@ -25,6 +25,6 @@ public class ShoppingCart {
     }
 
     public int numberOfProducts() {
-        return 1;
+        return productPrices.size();
     }
 }
