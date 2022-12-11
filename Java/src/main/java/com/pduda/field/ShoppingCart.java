@@ -17,7 +17,7 @@ public class ShoppingCart {
     }
 
     public int calculateTotalPrice() {
-        return price;
+        return productPrices.stream().mapToInt(Integer::intValue).sum();
     }
 
     public boolean hasDiscount() {
