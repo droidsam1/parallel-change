@@ -38,4 +38,13 @@ public class ShoppingCartTest {
         Assertions.assertFalse(shoppingCart.hasDiscount());
     }
 
+    @Test
+    public void multipleItem_numberOfProductsInTheCart() {
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.add(10);
+        shoppingCart.add(10);
+
+        Assertions.assertEquals(2, shoppingCart.numberOfProducts());
+    }
+
 }
