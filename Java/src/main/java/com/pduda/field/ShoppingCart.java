@@ -17,6 +17,7 @@ public class ShoppingCart {
         this.hasDiscount = price >= 100;
         this.price += price;
         this.numberOfProducts++;
+        this.productPrices.add(price);
     }
 
     public int calculateTotalPrice() {
@@ -28,6 +29,6 @@ public class ShoppingCart {
     }
 
     public int numberOfProducts() {
-        return numberOfProducts;
+        return this.productPrices.size();
     }
 }
