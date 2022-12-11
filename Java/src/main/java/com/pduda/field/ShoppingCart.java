@@ -5,14 +5,12 @@ import java.util.List;
 
 public class ShoppingCart {
     private final List<Integer> productPrices;
-    private int price;
 
     public ShoppingCart() {
-        productPrices = new ArrayList<>();
+        this.productPrices = new ArrayList<>();
     }
 
     public void add(int price) {
-        this.price += price;
         this.productPrices.add(price);
     }
 
