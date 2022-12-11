@@ -5,14 +5,12 @@ import java.util.List;
 
 public class ShoppingCart {
     private final List<Integer> productPrices;
-    private int price;
 
     public ShoppingCart() {
         productPrices = new ArrayList<>();
     }
 
     public void add(int price) {
-        this.price = price;
         this.productPrices.add(price);
     }
 
@@ -21,7 +19,7 @@ public class ShoppingCart {
     }
 
     public boolean hasDiscount() {
-        return price >= 100;
+        return productPrices.stream().anyMatch(price -> price >= 100);
     }
 
     public int numberOfProducts() {
