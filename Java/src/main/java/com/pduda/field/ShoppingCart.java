@@ -5,7 +5,10 @@ public class ShoppingCart {
 
     private int numberOfProducts;
 
+    private boolean hasDiscount;
+
     public void add(int price) {
+        this.hasDiscount = price >= 100;
         this.price += price;
         this.numberOfProducts++;
     }
@@ -15,7 +18,7 @@ public class ShoppingCart {
     }
 
     public boolean hasDiscount() {
-        return price >= 100;
+        return hasDiscount;
     }
 
     public int numberOfProducts() {

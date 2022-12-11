@@ -56,4 +56,22 @@ public class ShoppingCartTest {
         Assertions.assertEquals(20, shoppingCart.calculateTotalPrice());
     }
 
+    @Test
+    public void multipleItems_hasDiscountIfContainsAtLeastOneProductWorthAtLeast100() {
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.add(10);
+        shoppingCart.add(100);
+
+        Assertions.assertTrue(shoppingCart.hasDiscount());
+    }
+
+    @Test
+    public void multipleItems_hasNoDiscountIfContainsProductsWorthLessThan100() {
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.add(90);
+        shoppingCart.add(10);
+
+        Assertions.assertFalse(shoppingCart.hasDiscount());
+    }
+
 }
