@@ -13,6 +13,7 @@ public class ShoppingCart {
 
     public void add(int price) {
         this.price = price;
+        this.productPrices.add(price);
     }
 
     public int calculateTotalPrice() {
